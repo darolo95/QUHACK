@@ -183,7 +183,9 @@ Reference: `verify_q8` and Challenge 8 helper scripts
 
 Unitary
 - The provided 4×4 matrix matches the 2‑qubit Quantum Fourier Transform (QFT):
-LaTeX (math block)
+<details open>
+<summary><strong>Matrix </strong></summary>
+
 $$
 \frac{1}{2}
 \begin{pmatrix}
@@ -193,6 +195,9 @@ $$
 1 & -i & -1 & i
 \end{pmatrix}
 $$
+
+</details>
+
 
 Analysis & compilation
 - QFT decomposition: Hadamards plus controlled phase rotations CP(π/2).
