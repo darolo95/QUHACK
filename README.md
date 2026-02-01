@@ -1,6 +1,6 @@
 # QUHACK Submission Report
 
-- Git repository: darolo95/QUHACK (collaborators: ItzEnes, darolo95)
+- Git repository: darolo95/QUHACK (collaborators: ItzEnes, darolo95, xbluegalaxyx)
 - Authors: E. YILDIZ & D. Tafrishi - xbluegalaxyx - Team Quackers
 - Contest: MIT IQuHack 2026
 - Date: 2026-02-01
@@ -109,7 +109,7 @@ Outcome
 
 Reference: `quest4.py`
 
-## Quest 4 - Exponential of H1 = XX + YY : e^{i π/7 H1} - BIS
+## Quest 4 - Exponential of H1 = XX + YY : e^{i π/7 H1} - BIS_xbluegalaxyx
 I have diagonalized this Hamiltonian matrix H1 along the Z axis by using the Rz(theta) function to make sure that the axis of rotation of the particle is minimum. This also makes sure that the axis of rotation is not a multiple of pi/4, which is the characteristics of a T-gate. This ensure that minimum number of T-gates are used. 
 Mathematically, I wrapped the Hamiltonian matrix H1 by the gates H (Hadamard) and the S gate (Phase gate) twice to obtain the result Z XOR Z, diagonalized along the Z axis. Then we exponentiated it and passed it into the Rz() function with a multiple of 2, which essentially negates the 2 factor in the denominator in the default Rz() function. Then we sandwiched it with CNOT (Controlled-Not) function to create a control and target qubit: Clifford-T  universal gates. 
 Identity Used: CNOT – Rz(2theta) – CNOT
@@ -183,12 +183,16 @@ Reference: `verify_q8` and Challenge 8 helper scripts
 
 Unitary
 - The provided 4×4 matrix matches the 2‑qubit Quantum Fourier Transform (QFT):
-
-  1/2 ·
-  [ [ 1,  1,  1,  1 ],
-    [ 1,  i, −1, −i ],
-    [ 1, −1,  1, −1 ],
-    [ 1, −i, −1,  i ] ]
+LaTeX (math block)
+$$
+\frac{1}{2}
+\begin{pmatrix}
+1 & 1 & 1 & 1 \\
+1 & i & -1 & -i \\
+1 & -1 & 1 & -1 \\
+1 & -i & -1 & i
+\end{pmatrix}
+$$
 
 Analysis & compilation
 - QFT decomposition: Hadamards plus controlled phase rotations CP(π/2).
